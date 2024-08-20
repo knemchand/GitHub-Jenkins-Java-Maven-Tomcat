@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-      $JENKINS_URL: "${{ secrets.SLACK_WEBHOOK_URL }}"
-      $JENKINS_USER: "${{ secrets.SLACK_WEBHOOK_URL }}"
-      $JENKINS_API_TOKEN: "${{ secrets.SLACK_WEBHOOK_URL }}"
+      $JENKINS_URL: "${{ secrets.JENKINS_URL }}"
+      $JENKINS_USER: "${{ secrets.JENKINS_USER }}"
+      $JENKINS_API_TOKEN: "${{ secrets.JENKINS_API_TOKEN }}"
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 17
