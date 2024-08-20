@@ -36,8 +36,4 @@ jobs:
         connection-string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
         name: my-artifact
         path: staging        
-    - name: Trigger Jenkins Deployment Job
-      if: success()
-      run: |
-        curl -X POST "$JENKINS_URL/job/java-maven/build" \
-        --user "$JENKINS_USER:$JENKINS_API_TOKEN"
+   
