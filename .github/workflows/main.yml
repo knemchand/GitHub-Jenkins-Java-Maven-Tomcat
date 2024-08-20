@@ -42,4 +42,4 @@ jobs:
       if: success()
       run: |
         #curl -X POST "$JENKINS_URL/job/java-maven/build" --user "$JENKINS_USER:$JENKINS_API_TOKEN"        
-        curl -X POST "http:/http://52.168.127.156:8080/job/java-maven/build" --user admin:117eb5c83c98ca6690b9eb33c6d9aa2192
+        curl -X POST "http://52.168.127.156:8080/job/java-maven/build" --user admin:117eb5c83c98ca6690b9eb33c6d9aa2192
