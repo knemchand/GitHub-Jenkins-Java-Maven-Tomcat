@@ -41,6 +41,5 @@ jobs:
     - name: Trigger Jenkins Deployment Job
       if: success()
       run: |
-        curl -X POST "$JENKINS_URL/job/java-maven/build" --user "$JENKINS_USER:$JENKINS_API_TOKEN"
-        
-        #curl -X POST "http://172.190.153.9:8080/job/java-maven/build" --user admin:11e5e8c0c24f6dbead6912e15a3b6b817a
+        #curl -X POST "$JENKINS_URL/job/java-maven/build" --user "$JENKINS_USER:$JENKINS_API_TOKEN"        
+        curl -X POST "http://172.190.153.9:8080/job/java-maven/build" --user admin:11e5e8c0c24f6dbead6912e15a3b6b817a
