@@ -29,8 +29,10 @@ jobs:
           cp target/*.war staging
     - name: Test with Maven
       run: mvn -B test --file pom.xml
-    - uses: fixpoint/azblob-upload-artifact@v4
     
+    - name: Upload build artifacts to Azure blob storage
+    - uses: fixpoint/azblob-upload-artifact@v4    
+      if: success()
       with:
         connection-string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
         name: my-artifact
